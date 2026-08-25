@@ -1,0 +1,21 @@
+schema_version = 2
+provenance_lock = "cache/provenance.lock.json"
+
+[left]
+project_root = "/absolute/path/to/project-a"
+source_roots = ["app/src", "base/src"]
+variant = "demoRelease"
+artifact_output = "app/build/outputs/bundle/demoRelease/app-demo-release.aab"
+prepare_task = ":app:bundleDemoRelease"
+owned_generated_roots = [
+  "app/build/generated/java/generateDemoReleaseJunkCode",
+  "app/build/generated/res/generateDemoReleaseJunkCode",
+  "app/build/generated/source/junk/demoRelease/AndroidManifest.xml",
+]
+
+[right]
+project_root = "/absolute/path/to/project-b"
+source_roots = ["app/src", "base/src"]
+variant = "release"
+artifact_output = "/absolute/path/to/prebuilt-b.aab"
+owned_generated_roots = []

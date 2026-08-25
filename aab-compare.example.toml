@@ -1,0 +1,26 @@
+long_method_min_instructions = 100
+min_method_instructions = 12
+min_method_similarity = 0.70
+lsh_threshold = 0.55
+minhash_permutations = 128
+max_findings_per_dimension = 50
+max_source_evidence = 20
+subprocess_timeout_seconds = 1800
+java_max_heap = "4g"
+
+[weights]
+business_code = 35
+long_methods = 15
+manifest = 10
+resources = 10
+images = 8
+dependencies = 5
+assets_native = 10
+build_structure = 7
+
+[archive_limits]
+max_input_size = 4294967296
+max_uncompressed_size = 17179869184
+max_entry_size = 2147483648
+max_entries = 200000
+max_compression_ratio = 200.0
